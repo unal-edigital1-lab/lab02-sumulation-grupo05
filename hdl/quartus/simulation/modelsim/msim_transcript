@@ -1,0 +1,55 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do BCD2SSEG_simulation_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src {C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src/BCDtoSSeg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:08:19 on Sep 23,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src" C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src/BCDtoSSeg.v 
+# -- Compiling module BCDtoSSeg
+# 
+# Top level modules:
+# 	BCDtoSSeg
+# End time: 09:08:19 on Sep 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src {C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:08:19 on Sep 23,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src" C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v 
+# -- Compiling module BCDtoSSeg_TB
+# 
+# Top level modules:
+# 	BCDtoSSeg_TB
+# End time: 09:08:19 on Sep 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  BCDtoSSeg_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" BCDtoSSeg_TB 
+# Start time: 09:08:20 on Sep 23,2020
+# Loading work.BCDtoSSeg_TB
+# Loading work.BCDtoSSeg
+# ** Warning: (vsim-3017) C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v(13): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /BCDtoSSeg_TB/uut File: C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src/BCDtoSSeg.v
+# ** Warning: (vsim-3722) C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v(13): [TFMPC] - Missing connection for port 'an'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v(35)
+#    Time: 200 ns  Iteration: 0  Instance: /BCDtoSSeg_TB
+# 1
+# Break in NamedBeginStat TEST_CASE at C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v line 35
+# End time: 09:09:25 on Sep 23,2020, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 2

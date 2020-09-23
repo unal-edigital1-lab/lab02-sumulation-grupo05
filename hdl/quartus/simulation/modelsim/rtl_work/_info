@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/simulation/modelsim
+vBCDtoSSeg
+Z1 !s110 1600870099
+!i10b 1
+!s100 T2CJQTbG8bV:jjZdMOViL0
+IEimRTgUFi2BRY]Oi_CL`X3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1600869559
+8C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src/BCDtoSSeg.v
+FC:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src/BCDtoSSeg.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1600870099.000000
+!s107 C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src/BCDtoSSeg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src|C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src/BCDtoSSeg.v|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src
+Z7 tCvgOpt 0
+n@b@c@dto@s@seg
+vBCDtoSSeg_TB
+R1
+!i10b 1
+!s100 Fb^2o0V>fg>YPOeYQZInK1
+Iim@8ilQ8Xi>V=WZTFzC8E2
+R2
+R0
+R3
+8C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v
+FC:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src|C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src/BCD2SSeg_TB.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/quartus/../src
+R7
+n@b@c@dto@s@seg_@t@b
