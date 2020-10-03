@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module BCDtoSSegx4(
+module display(
     input [15:0] num,
     input clk,
     output [0:6] sseg,

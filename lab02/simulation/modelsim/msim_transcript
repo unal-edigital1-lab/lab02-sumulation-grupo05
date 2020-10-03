@@ -1,0 +1,74 @@
+# Reading pref.tcl
+# do BCDtoSSegx4_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/USER/Documents/2020-2/electronica\ digital\ l/github/lab02-sumulation-grupo05/lab02 {C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:14:22 on Oct 02,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02" C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v 
+# -- Compiling module BCDtoSSegx4_TB
+# 
+# Top level modules:
+# 	BCDtoSSegx4_TB
+# End time: 22:14:23 on Oct 02,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER/Documents/2020-2/electronica\ digital\ l/github/lab02-sumulation-grupo05/lab02 {C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:14:23 on Oct 02,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02" C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v 
+# -- Compiling module BCDtoSSegx4
+# 
+# Top level modules:
+# 	BCDtoSSegx4
+# End time: 22:14:23 on Oct 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/USER/Documents/2020-2/electronica\ digital\ l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4 {C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:14:23 on Oct 02,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4" C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v 
+# -- Compiling module BCDtoSSeg
+# 
+# Top level modules:
+# 	BCDtoSSeg
+# End time: 22:14:23 on Oct 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/USER/Documents/2020-2/electronica\ digital\ l/github/lab02-sumulation-grupo05/lab02 {C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:14:23 on Oct 02,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02" C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v 
+# -- Compiling module BCDtoSSegx4_TB
+# 
+# Top level modules:
+# 	BCDtoSSegx4_TB
+# End time: 22:14:23 on Oct 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  BCDtoSSegx4_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=""+acc"" BCDtoSSegx4_TB 
+# Start time: 22:14:24 on Oct 02,2020
+# Loading work.BCDtoSSegx4_TB
+# Loading work.BCDtoSSegx4
+# Loading work.BCDtoSSeg
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /BCDtoSSegx4_TB/uut File: C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v Line: 14
+# ** Warning: (vsim-3722) C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v(14): [TFMPC] - Missing connection for port 'led'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Simulation stop requested.
+# End time: 22:18:29 on Oct 02,2020, Elapsed time: 0:04:05
+# Errors: 0, Warnings: 2

@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module BCDtoSSegx4_TB;
+module testbench;
 
 	// Inputs
 	reg [15:0] num;
@@ -12,7 +12,7 @@ module BCDtoSSegx4_TB;
 
 	// Instantiate the Unit Under Test (UUT)
 	BCDtoSSegx4 uut (
-		.num(num), 
+	//	.num(num), 
 		.clk(clk2), 
 		.sseg(sseg), 
 		.an(an), 
@@ -32,5 +32,3 @@ module BCDtoSSegx4_TB;
       
 
 	always #1 clk2 = ~clk2;
-	endmodule
-	
