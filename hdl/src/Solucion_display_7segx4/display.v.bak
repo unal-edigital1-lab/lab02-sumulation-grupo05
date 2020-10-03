@@ -1,19 +1,19 @@
 `timescale 1ns / 1ps
 module display(
     input [15:0] num,
-    input clk,//Frecuencia de entrada
-    output [0:6] sseg,//salida
-    output reg [3:0] an,//variables de control,anodo comun
+    input clk,
+    output [0:6] sseg,
+    output reg [3:0] an,
 	 input rst,
 	 output led
     );
 
 
 
-reg [3:0]bcd=0;//entrada
+reg [3:0]bcd=0;
 //wire [15:0] num=16'h4321;
  
-BCDtoSSeg bcdtosseg(.BCD(bcd), .SSeg(sseg));//instancia la funcion
+BCDtoSSeg bcdtosseg(.BCD(bcd), .SSeg(sseg));
 
 reg [26:0] cfreq=0;
 wire enable;

@@ -2,22 +2,22 @@
 
 
 |BCDtoSSegx4_TB|BCDtoSSegx4:uut
-num[0] => Mux3.IN3
-num[1] => Mux2.IN3
-num[2] => Mux1.IN3
-num[3] => Mux0.IN3
-num[4] => Mux3.IN2
-num[5] => Mux2.IN2
-num[6] => Mux1.IN2
-num[7] => Mux0.IN2
-num[8] => Mux3.IN1
-num[9] => Mux2.IN1
-num[10] => Mux1.IN1
-num[11] => Mux0.IN1
-num[12] => Mux3.IN0
-num[13] => Mux2.IN0
-num[14] => Mux1.IN0
-num[15] => Mux0.IN0
+innum[0] => Mux3.IN3
+innum[1] => Mux2.IN3
+innum[2] => Mux1.IN3
+innum[3] => Mux0.IN3
+innum[4] => Mux3.IN2
+innum[5] => Mux2.IN2
+innum[6] => Mux1.IN2
+innum[7] => Mux0.IN2
+innum[8] => Mux3.IN1
+innum[9] => Mux2.IN1
+innum[10] => Mux1.IN1
+innum[11] => Mux0.IN1
+innum[12] => Mux3.IN0
+innum[13] => Mux2.IN0
+innum[14] => Mux1.IN0
+innum[15] => Mux0.IN0
 clk => cfreq[0].CLK
 clk => cfreq[1].CLK
 clk => cfreq[2].CLK

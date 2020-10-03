@@ -1,6 +1,6 @@
 Analysis & Elaboration report for BCD2SSEG_simulation
-Wed Sep 23 09:08:08 2020
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Wed Sep 30 00:43:37 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2019  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,8 +37,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Sep 23 09:08:08 2020       ;
-; Quartus Prime Version         ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Analysis & Elaboration Status ; Successful - Wed Sep 30 00:43:37 2020       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; BCD2SSEG_simulation                         ;
 ; Top-level Entity Name         ; BCDtoSSeg                                   ;
 ; Family                        ; Cyclone V                                   ;
@@ -57,8 +57,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -160,18 +160,18 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed Sep 23 09:07:56 2020
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Wed Sep 30 00:43:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BCD2SSEG_simulation -c BCD2SSEG_simulation --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /users/uecci/documents/github/unal/digital1-2020-2/lab02/src/bcdtosseg.v
-    Info (12023): Found entity 1: BCDtoSSeg File: C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab02/src/BCDtoSSeg.v Line: 1
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /github/lab02-sumulation-grupo05/hdl/src/bcdtosseg.v
+    Info (12023): Found entity 1: BCDtoSSeg File: G:/Github/lab02-sumulation-grupo05/hdl/src/BCDtoSSeg.v Line: 1
 Info (12127): Elaborating entity "BCDtoSSeg" for the top level hierarchy
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4778 megabytes
-    Info: Processing ended: Wed Sep 23 09:08:08 2020
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Wed Sep 30 00:43:37 2020
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:47
 
 

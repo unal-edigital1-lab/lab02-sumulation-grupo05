@@ -2,7 +2,7 @@
 module BCDtoSSegx4_TB;
 
 	// Inputs
-	reg [15:0] num;
+	reg [15:0] innum;
 	reg clk2;
 	reg rst;
 
@@ -12,7 +12,7 @@ module BCDtoSSegx4_TB;
 
 	// Instantiate the Unit Under Test (UUT)
 	BCDtoSSegx4 uut (
-		.num(num), 
+		.innum(innum), 
 		.clk(clk2), 
 		.sseg(sseg), 
 		.an(an), 
@@ -25,9 +25,8 @@ module BCDtoSSegx4_TB;
 		rst = 1;
 		#10 rst =0;
 		
-		num = 16'h4321;
+		innum = 16'h4321;
         
-
 	end
       
 

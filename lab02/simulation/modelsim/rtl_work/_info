@@ -8,68 +8,68 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/simulation/modelsim
+Z0 dG:/Github/lab02-sumulation-grupo05/lab02/simulation/modelsim
 vBCDtoSSeg
-Z1 !s110 1601694863
+Z1 !s110 1601701864
 !i10b 1
 !s100 dPZ^[1PlOV45kZe3Pno?N1
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IDHLG:@1L0XPhCi74l_lU22
+IlOENR@5:7V4_cRHIgm@oW3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1601691096
-8C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v
-FC:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v
+w1600883515
+8G:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v
+FG:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v
 !i122 2
 L0 1 28
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1601694863.000000
-!s107 C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4|C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v|
+Z5 !s108 1601701864.000000
+!s107 G:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4|G:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v|
 !i113 1
 Z6 o-vlog01compat -work work
-!s92 -vlog01compat -work work {+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4}
+!s92 -vlog01compat -work work +incdir+G:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4
 Z7 tCvgOpt 0
 n@b@c@dto@s@seg
 vBCDtoSSegx4
 R1
 !i10b 1
-!s100 F?QNzgai2mIceCX`J;C6j2
+!s100 nja94aM61Xnofc7_O8zSi0
 R2
-I=o52[b^c?eZcDFe^Ak]ea1
+I?Zm<?YC;fU6bmG8<JDIYg3
 R3
 R0
-w1601691871
-8C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v
-FC:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v
+w1601701615
+8G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v
+FG:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v
 !i122 1
-L0 2 49
+L0 2 44
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02|C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v|
+!s107 G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/Github/lab02-sumulation-grupo05/lab02|G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v|
 !i113 1
 R6
-Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02}
+Z8 !s92 -vlog01compat -work work +incdir+G:/Github/lab02-sumulation-grupo05/lab02
 R7
 n@b@c@dto@s@segx4
 vBCDtoSSegx4_TB
 R1
 !i10b 1
-!s100 W_:1z8BdTCVeR9V7o:RYK1
+!s100 ledokc?2zjCKHc5kBGLC43
 R2
-IS220?hnBMBHY:^Lhb3TM]2
+I3JF=IL<9;W89Q9zd;jml?2
 R3
 R0
-w1601694814
-8C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v
-FC:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v
+w1601701819
+8G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v
+FG:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v
 !i122 3
 L0 2 34
 R4
@@ -77,8 +77,8 @@ r1
 !s85 0
 31
 R5
-!s107 C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02|C:/Users/USER/Documents/2020-2/electronica digital l/github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v|
+!s107 G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/Github/lab02-sumulation-grupo05/lab02|G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v|
 !i113 1
 R6
 R8
