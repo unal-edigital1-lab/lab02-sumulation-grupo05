@@ -1,5 +1,5 @@
 Analysis & Elaboration report for BCDtoSSegx4
-Sat Oct 03 00:10:41 2020
+Tue Oct 06 20:52:26 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Sat Oct 03 00:10:41 2020       ;
+; Analysis & Elaboration Status      ; Successful - Tue Oct 06 20:52:26 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; BCDtoSSegx4                                 ;
 ; Top-level Entity Name              ; BCDtoSSegx4_TB                              ;
@@ -160,15 +160,16 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCDtoSSegx4:uut"                                                                                         ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; sseg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; an   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
-; led  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCDtoSSegx4:uut"                                                                                                                                                                    ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; innum ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (14 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; sseg  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; an    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; led   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -177,7 +178,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Oct 03 00:10:20 2020
+    Info: Processing started: Tue Oct 06 20:52:05 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BCDtoSSegx4 -c BCDtoSSegx4 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -187,19 +188,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file bcdtoss
     Info (12023): Found entity 1: BCDtoSSegx4 File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file /github/lab02-sumulation-grupo05/hdl/src/solucion_display_7segx4/bcdtosseg.v
     Info (12023): Found entity 1: BCDtoSSeg File: G:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file binary2bcd.v
+    Info (12023): Found entity 1: Binary2BCD File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 1
 Info (12127): Elaborating entity "BCDtoSSegx4_TB" for the top level hierarchy
-Warning (10755): Verilog HDL warning at BCDtoSSegx4_TB.v(34): assignments to clk2 create a combinational loop File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v Line: 34
+Warning (10755): Verilog HDL warning at BCDtoSSegx4_TB.v(33): assignments to clk2 create a combinational loop File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v Line: 33
 Info (12128): Elaborating entity "BCDtoSSegx4" for hierarchy "BCDtoSSegx4:uut" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v Line: 20
-Warning (10230): Verilog HDL assignment warning at BCDtoSSegx4.v(24): truncated value with size 32 to match size of target (27) File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 24
-Warning (10230): Verilog HDL assignment warning at BCDtoSSegx4.v(34): truncated value with size 32 to match size of target (2) File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 34
-Info (12128): Elaborating entity "BCDtoSSeg" for hierarchy "BCDtoSSegx4:uut|BCDtoSSeg:bcdtosseg" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 13
+Warning (10230): Verilog HDL assignment warning at BCDtoSSegx4.v(31): truncated value with size 32 to match size of target (27) File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 31
+Warning (10230): Verilog HDL assignment warning at BCDtoSSegx4.v(41): truncated value with size 32 to match size of target (2) File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 41
+Info (12128): Elaborating entity "BCDtoSSeg" for hierarchy "BCDtoSSegx4:uut|BCDtoSSeg:bcdtosseg" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 19
+Info (12128): Elaborating entity "Binary2BCD" for hierarchy "BCDtoSSegx4:uut|Binary2BCD:binary2BCD" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 20
+Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(16): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 16
+Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(18): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 18
+Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(20): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 20
+Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(22): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 22
+Info (10041): Inferred latch for "shifter[26]" at Binary2BCD.v(21) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 21
+Info (10041): Inferred latch for "shifter[27]" at Binary2BCD.v(21) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 21
+Info (10041): Inferred latch for "shifter[28]" at Binary2BCD.v(21) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 21
+Info (10041): Inferred latch for "shifter[22]" at Binary2BCD.v(19) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 19
+Info (10041): Inferred latch for "shifter[23]" at Binary2BCD.v(19) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 19
+Info (10041): Inferred latch for "shifter[24]" at Binary2BCD.v(19) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 19
+Info (10041): Inferred latch for "shifter[25]" at Binary2BCD.v(19) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 19
+Info (10041): Inferred latch for "shifter[18]" at Binary2BCD.v(17) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 17
+Info (10041): Inferred latch for "shifter[19]" at Binary2BCD.v(17) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 17
+Info (10041): Inferred latch for "shifter[20]" at Binary2BCD.v(17) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 17
+Info (10041): Inferred latch for "shifter[21]" at Binary2BCD.v(17) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 17
+Info (10041): Inferred latch for "shifter[14]" at Binary2BCD.v(15) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 15
+Info (10041): Inferred latch for "shifter[15]" at Binary2BCD.v(15) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 15
+Info (10041): Inferred latch for "shifter[16]" at Binary2BCD.v(15) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 15
+Info (10041): Inferred latch for "shifter[17]" at Binary2BCD.v(15) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "clk2" is missing source, defaulting to GND File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v Line: 6
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4782 megabytes
-    Info: Processing ended: Sat Oct 03 00:10:41 2020
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4783 megabytes
+    Info: Processing ended: Tue Oct 06 20:52:26 2020
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:48
+    Info: Total CPU time (on all processors): 00:00:47
 
 

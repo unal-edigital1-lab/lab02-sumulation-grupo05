@@ -25,7 +25,7 @@ module BCDtoSSegx4_TB;
 		rst = 1;
 		#10 rst =0;
 		
-		innum = 16'h4321;
+		innum = 16'd4321;
         
 	end
       
