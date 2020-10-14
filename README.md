@@ -186,3 +186,4 @@ Se inicializan los registros de entrada, incluyendo el número digitado por el u
 
 Resultados:
 --------
+https://github.com/unal-edigital1-lab/lab02-sumulation-grupo05/blob/master/resultados.jpeg
