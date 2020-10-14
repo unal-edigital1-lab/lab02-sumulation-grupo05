@@ -183,3 +183,6 @@ Se inicializan los registros de entrada, incluyendo el número digitado por el u
 	always #1 clk2 = ~clk2;
 	endmodule
 -------------------------------------------------------------------------------------------------------
+
+Resultados:
+--------
