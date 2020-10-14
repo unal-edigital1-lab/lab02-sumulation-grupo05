@@ -14,7 +14,7 @@ El código:
  
 A continuación se definio el modulo BCDtoSSeg, el cual tiene como entrada BCD y como salida SSeg como se define a continuación: 
          
-	 module BCDtoSSeg (BCD, SSeg);
+    module BCDtoSSeg (BCD, SSeg);
     input [3:0] BCD;
     output reg [6:0] SSeg;
   
