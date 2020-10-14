@@ -2,11 +2,16 @@
 laboratorio 02 simulación
 
 Integrantes:
+-------
 * Paula Sofia Medina
 * Johan Sebastian Molina
 * Maria Alejandra Salgado
 
+
+
 El código:
+ --------------
+ 
 A continuación se definio el modulo BCDtoSSeg, el cual tiene como entrada BCD y como salida SSeg como se define a continuación: 
          
 	 module BCDtoSSeg (BCD, SSeg);
@@ -150,6 +155,8 @@ El siguiente modulo solo es utilizado para estimular la simulación de los modul
 	// Outputs
 	wire [0:6] sseg;
 	wire [3:0] an;
+
+Se instancia el modulo del archivo TOP "BCDtoSSegx4"
 
 	// Instantiate the Unit Under Test (UUT)
 	BCDtoSSegx4 uut (
