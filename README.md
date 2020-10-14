@@ -8,19 +8,21 @@ Integrantes:
 
 El código:
 A continuación se definio el modulo BCDtoSSeg, el cual tiene como entrada BCD y como salida SSeg como se define a continuación: 
-module BCDtoSSeg (BCD, SSeg);
-
-  input [3:0] BCD;
-  output reg [6:0] SSeg;
+         
+	 module BCDtoSSeg (BCD, SSeg);
+    input [3:0] BCD;
+    output reg [6:0] SSeg;
   
 Luego de esto se definio un always con el fin de que realice la acción en el siguente bloque:
-always @ ( * ) begin
+             
+    always @ ( * ) begin
 
 En este bloque se asignan los valores correspondientes al registro de salida SSEG dependiendo de los valores de entrada que se tengan en BCD, para permitir la visualización de los números en el display siete segmentos.
-Se define al comienzo de cada caso el comando 4'b que quiere decir que ese valor es de cuatro bits y será un valor binario, lo cual convierte a un numero de 7 bits en binario por medio de la instrucción 7'b.
+Se define al comienzo de cada caso el comando 4'b que quiere decir que ese valor es de cuatro bits y será un valor binario, lo cual convierte a un numero de 7   bits en binario por medio de la instrucción 7'b.
 
-  case (BCD)
-   4'b0000: SSeg = 7'b0000001; // "0"  
+   
+    case (BCD)
+     4'b0000: SSeg = 7'b0000001; // "0"  
 	4'b0001: SSeg = 7'b1001111; // "1" 
 	4'b0010: SSeg = 7'b0010010; // "2" 
 	4'b0011: SSeg = 7'b0000110; // "3" 
@@ -32,8 +34,39 @@ Se define al comienzo de cada caso el comando 4'b que quiere decir que ese valor
 	4'b1001: SSeg = 7'b0000100; // "9"
     default:
     SSeg = 0;
-  endcase
+    endcase
+    end
+
+--------------------------------------------------------------------------------------------------------------------
+module Binary2BCD(
+    input [13:0] binary,
+    output  [3:0] thousands  ,
+    output  [3:0] hundreds  ,
+    output  [3:0] tens ,
+    output  [3:0] ones 
+    ); 
+reg [29:0]shifter=0;
+
+ reg [3:0]D4;
+ reg [3:0]D3;
+ reg [3:0]D2;
+ reg [3:0]D1;
+
+ assign thousands=D4;
+ assign hundreds=D3;
+ assign  tens =D2;
+ assign ones =D1;
+ 
+integer i; 
+always@(binary) 
+begin 
+     D4 = binary / 1000;
+		D3= (binary-1000*D4)/100;
+		D2= ((binary-1000*D4)-(D3*100))/10;
+		D1= (binary-1000*D4)-(D3*100)-D2*10;
+
 end
+endmodule
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -91,38 +124,6 @@ end
 
 endmodule
 
---------------------------------------------------------------------------------------------------------------------
-module Binary2BCD(
-    input [13:0] binary,
-    output reg [3:0] thousands =0 ,
-    output reg [3:0] hundreds =0 ,
-    output reg [3:0] tens = 0,
-    output reg [3:0] ones = 0
-    ); 
-reg [29:0]shifter=0; 
-integer i; 
-always@(binary) 
-begin 
-    shifter[13:0] = binary; 
-    
-    for (i = 0; i< 14; i = i+1) begin 
-        if (shifter[17:14] >= 5) 
-            shifter[17:14] = shifter[17:14] + 3; 
-        if (shifter[21:18] >= 5)             
-            shifter[21:18] = shifter[21:18] + 3;
-        if (shifter[25:22] >= 5)             
-            shifter[25:22] = shifter[25:22] + 3; 
-        if (shifter[29:26] >= 5)              
-            shifter[29:26] = shifter[29:26] + 3; 
-        shifter = shifter  << 1;    
-      
-    end  
-    thousands = shifter[29:26];
-    hundreds = shifter[25:22];
-    tens = shifter[21:18];
-    ones = shifter[17:14];
-end
-endmodule
 ---------------------------------------------------------------------------------------------------------------------------
 El siguiente modulo 
 
