@@ -3,8 +3,8 @@ laboratorio 02 simulación
 
 Integrantes:
 -------
-* Paula Sofia Medina
 * Johan Sebastian Molina
+* Paula Sofia Medina
 * Maria Alejandra Salgado
 
 
