@@ -1,5 +1,5 @@
-Analysis & Elaboration report for BCDtoSSegx4
-Tue Oct 06 20:52:26 2020
+Analysis & Synthesis report for BCDtoSSegx4
+Wed Oct 07 12:48:41 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,11 +7,24 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "BCDtoSSegx4:uut"
-  6. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_divide:Div1
+ 12. Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_divide:Div2
+ 13. Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_mult:Mult0
+ 15. Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_mult:Mult1
+ 16. lpm_mult Parameter Settings by Entity Instance
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -36,51 +49,35 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                   ;
+; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Tue Oct 06 20:52:26 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 07 12:48:41 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; BCDtoSSegx4                                 ;
-; Top-level Entity Name              ; BCDtoSSegx4_TB                              ;
+; Top-level Entity Name              ; BCDtoSSegx4                                 ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                   ;
-; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                   ;
-; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                   ;
-; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 633                                         ;
+;     Total combinational functions  ; 633                                         ;
+;     Dedicated logic registers      ; 27                                          ;
+; Total registers                    ; 27                                          ;
+; Total pins                         ; 28                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total GXB Receiver Channel PCS     ; 0                                           ;
+; Total GXB Receiver Channel PMA     ; 0                                           ;
+; Total GXB Transmitter Channel PCS  ; 0                                           ;
+; Total GXB Transmitter Channel PMA  ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; BCDtoSSegx4_TB     ; BCDtoSSegx4        ;
+; Top-level entity name                                            ; BCDtoSSegx4        ; BCDtoSSegx4        ;
 ; Family name                                                      ; Cyclone IV GX      ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -160,26 +157,358 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCDtoSSegx4:uut"                                                                                                                                                                    ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; innum ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (14 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; sseg  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; an    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
-; led   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; BCDtoSSegx4.v                                  ; yes             ; User Verilog HDL File        ; G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v                         ;         ;
+; ../hdl/src/Solucion_display_7segx4/BCDtoSSeg.v ; yes             ; User Verilog HDL File        ; G:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v ;         ;
+; Binary2BCD.v                                   ; yes             ; User Verilog HDL File        ; G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v                          ;         ;
+; lpm_divide.tdf                                 ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/lpm_divide.tdf                      ;         ;
+; abs_divider.inc                                ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/abs_divider.inc                     ;         ;
+; sign_div_unsign.inc                            ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/sign_div_unsign.inc                 ;         ;
+; aglobal201.inc                                 ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/aglobal201.inc                      ;         ;
+; db/lpm_divide_tmm.tdf                          ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/lpm_divide_tmm.tdf                 ;         ;
+; db/sign_div_unsign_rlh.tdf                     ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/sign_div_unsign_rlh.tdf            ;         ;
+; db/alt_u_div_4bf.tdf                           ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/alt_u_div_4bf.tdf                  ;         ;
+; db/add_sub_1tc.tdf                             ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/add_sub_1tc.tdf                    ;         ;
+; db/add_sub_2tc.tdf                             ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/add_sub_2tc.tdf                    ;         ;
+; db/lpm_divide_qmm.tdf                          ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/lpm_divide_qmm.tdf                 ;         ;
+; db/sign_div_unsign_olh.tdf                     ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/sign_div_unsign_olh.tdf            ;         ;
+; db/alt_u_div_uaf.tdf                           ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/alt_u_div_uaf.tdf                  ;         ;
+; db/lpm_divide_7om.tdf                          ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/lpm_divide_7om.tdf                 ;         ;
+; db/sign_div_unsign_5nh.tdf                     ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/sign_div_unsign_5nh.tdf            ;         ;
+; db/alt_u_div_odf.tdf                           ; yes             ; Auto-Generated Megafunction  ; G:/Github/lab02-sumulation-grupo05/lab02/db/alt_u_div_odf.tdf                  ;         ;
+; lpm_mult.tdf                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/lpm_mult.tdf                        ;         ;
+; lpm_add_sub.inc                                ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/lpm_add_sub.inc                     ;         ;
+; multcore.inc                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/multcore.inc                        ;         ;
+; bypassff.inc                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/bypassff.inc                        ;         ;
+; altshift.inc                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/altshift.inc                        ;         ;
+; multcore.tdf                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/multcore.tdf                        ;         ;
+; csa_add.inc                                    ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/csa_add.inc                         ;         ;
+; mpar_add.inc                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/mpar_add.inc                        ;         ;
+; muleabz.inc                                    ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/muleabz.inc                         ;         ;
+; mul_lfrg.inc                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/mul_lfrg.inc                        ;         ;
+; mul_boothc.inc                                 ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/mul_boothc.inc                      ;         ;
+; alt_ded_mult.inc                               ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/alt_ded_mult.inc                    ;         ;
+; alt_ded_mult_y.inc                             ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/alt_ded_mult_y.inc                  ;         ;
+; dffpipe.inc                                    ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/dffpipe.inc                         ;         ;
+; mpar_add.tdf                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/mpar_add.tdf                        ;         ;
+; altshift.tdf                                   ; yes             ; Megafunction                 ; g:/quartus/quartus/libraries/megafunctions/altshift.tdf                        ;         ;
++------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                                   ;
++--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Resource                 ; Usage                                                                                                                                              ;
++--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; I/O pins                 ; 28                                                                                                                                                 ;
+;                          ;                                                                                                                                                    ;
+; DSP block 9-bit elements ; 0                                                                                                                                                  ;
+;                          ;                                                                                                                                                    ;
+; Maximum fan-out node     ; Binary2BCD:binary2BCD|lpm_divide:Div0|lpm_divide_7om:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_odf:divider|add_sub_10_result_int[11]~16 ;
+; Maximum fan-out          ; 37                                                                                                                                                 ;
+; Total fan-out            ; 1741                                                                                                                                               ;
+; Average fan-out          ; 2.42                                                                                                                                               ;
++--------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |BCDtoSSegx4                              ; 633 (31)            ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0         ; 28   ; 0            ; |BCDtoSSegx4                                                                                                                       ; BCDtoSSegx4         ; work         ;
+;    |BCDtoSSeg:bcdtosseg|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|BCDtoSSeg:bcdtosseg                                                                                                   ; BCDtoSSeg           ; work         ;
+;    |Binary2BCD:binary2BCD|                ; 595 (32)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD                                                                                                 ; Binary2BCD          ; work         ;
+;       |lpm_divide:Div0|                   ; 123 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_7om:auto_generated|  ; 123 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div0|lpm_divide_7om:auto_generated                                                   ; lpm_divide_7om      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 123 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div0|lpm_divide_7om:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_odf:divider|    ; 123 (123)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div0|lpm_divide_7om:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_odf:divider ; alt_u_div_odf       ; work         ;
+;       |lpm_divide:Div1|                   ; 264 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div1                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_tmm:auto_generated|  ; 264 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div1|lpm_divide_tmm:auto_generated                                                   ; lpm_divide_tmm      ; work         ;
+;             |sign_div_unsign_rlh:divider| ; 264 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div1|lpm_divide_tmm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh ; work         ;
+;                |alt_u_div_4bf:divider|    ; 264 (264)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div1|lpm_divide_tmm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_4bf:divider ; alt_u_div_4bf       ; work         ;
+;       |lpm_divide:Div2|                   ; 161 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div2                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_qmm:auto_generated|  ; 161 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div2|lpm_divide_qmm:auto_generated                                                   ; lpm_divide_qmm      ; work         ;
+;             |sign_div_unsign_olh:divider| ; 161 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div2|lpm_divide_qmm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh ; work         ;
+;                |alt_u_div_uaf:divider|    ; 161 (161)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_divide:Div2|lpm_divide_qmm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_uaf:divider ; alt_u_div_uaf       ; work         ;
+;       |lpm_mult:Mult0|                    ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_mult:Mult0                                                                                  ; lpm_mult            ; work         ;
+;          |multcore:mult_core|             ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_mult:Mult0|multcore:mult_core                                                               ; multcore            ; work         ;
+;       |lpm_mult:Mult1|                    ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_mult:Mult1                                                                                  ; lpm_mult            ; work         ;
+;          |multcore:mult_core|             ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |BCDtoSSegx4|Binary2BCD:binary2BCD|lpm_mult:Mult1|multcore:mult_core                                                               ; multcore            ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; cfreq[17..26]                          ; Lost fanout        ;
+; Total Number of Removed Registers = 10 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 27    ;
+; Number of registers using Synchronous Clear  ; 18    ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |BCDtoSSegx4|bcd[2]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                      ;
+; LPM_WIDTHD             ; 7              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_tmm ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_divide:Div2 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                      ;
+; LPM_WIDTHD             ; 4              ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_qmm ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_divide:Div0 ;
++------------------------+----------------+----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                         ;
++------------------------+----------------+----------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                      ;
+; LPM_WIDTHD             ; 10             ; Untyped                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
+; CBXI_PARAMETER         ; lpm_divide_7om ; Untyped                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
++------------------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_mult:Mult0 ;
++------------------------------------------------+---------------+----------------------+
+; Parameter Name                                 ; Value         ; Type                 ;
++------------------------------------------------+---------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON            ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF           ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON            ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF           ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 10            ; Untyped              ;
+; LPM_WIDTHB                                     ; 4             ; Untyped              ;
+; LPM_WIDTHP                                     ; 14            ; Untyped              ;
+; LPM_WIDTHR                                     ; 14            ; Untyped              ;
+; LPM_WIDTHS                                     ; 1             ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED      ; Untyped              ;
+; LPM_PIPELINE                                   ; 0             ; Untyped              ;
+; LATENCY                                        ; 0             ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; YES           ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; NO            ; Untyped              ;
+; USE_EAB                                        ; OFF           ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 6             ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone IV GX ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL        ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT           ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0             ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0             ; Untyped              ;
+; CBXI_PARAMETER                                 ; NOTHING       ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF           ; Untyped              ;
++------------------------------------------------+---------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Binary2BCD:binary2BCD|lpm_mult:Mult1 ;
++------------------------------------------------+---------------+----------------------+
+; Parameter Name                                 ; Value         ; Type                 ;
++------------------------------------------------+---------------+----------------------+
+; AUTO_CARRY_CHAINS                              ; ON            ; AUTO_CARRY           ;
+; IGNORE_CARRY_BUFFERS                           ; OFF           ; IGNORE_CARRY         ;
+; AUTO_CASCADE_CHAINS                            ; ON            ; AUTO_CASCADE         ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF           ; IGNORE_CASCADE       ;
+; LPM_WIDTHA                                     ; 4             ; Untyped              ;
+; LPM_WIDTHB                                     ; 7             ; Untyped              ;
+; LPM_WIDTHP                                     ; 11            ; Untyped              ;
+; LPM_WIDTHR                                     ; 11            ; Untyped              ;
+; LPM_WIDTHS                                     ; 1             ; Untyped              ;
+; LPM_REPRESENTATION                             ; UNSIGNED      ; Untyped              ;
+; LPM_PIPELINE                                   ; 0             ; Untyped              ;
+; LATENCY                                        ; 0             ; Untyped              ;
+; INPUT_A_IS_CONSTANT                            ; NO            ; Untyped              ;
+; INPUT_B_IS_CONSTANT                            ; YES           ; Untyped              ;
+; USE_EAB                                        ; OFF           ; Untyped              ;
+; MAXIMIZE_SPEED                                 ; 5             ; Untyped              ;
+; DEVICE_FAMILY                                  ; Cyclone IV GX ; Untyped              ;
+; CARRY_CHAIN                                    ; MANUAL        ; Untyped              ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT           ; TECH_MAPPER_APEX20K  ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO          ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0             ; Untyped              ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0             ; Untyped              ;
+; CBXI_PARAMETER                                 ; NOTHING       ; Untyped              ;
+; INPUT_A_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; INPUT_B_FIXED_VALUE                            ; Bx            ; Untyped              ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF           ; Untyped              ;
++------------------------------------------------+---------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                               ;
++---------------------------------------+--------------------------------------+
+; Name                                  ; Value                                ;
++---------------------------------------+--------------------------------------+
+; Number of entity instances            ; 2                                    ;
+; Entity Instance                       ; Binary2BCD:binary2BCD|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 10                                   ;
+;     -- LPM_WIDTHB                     ; 4                                    ;
+;     -- LPM_WIDTHP                     ; 14                                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; YES                                  ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                   ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
+; Entity Instance                       ; Binary2BCD:binary2BCD|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 4                                    ;
+;     -- LPM_WIDTHB                     ; 7                                    ;
+;     -- LPM_WIDTHP                     ; 11                                   ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                   ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                  ;
+;     -- USE_EAB                        ; OFF                                  ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                 ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                   ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                   ;
++---------------------------------------+--------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 28                          ;
+; cycloneiii_ff         ; 27                          ;
+;     ENA               ; 4                           ;
+;     SCLR              ; 18                          ;
+;     SLD               ; 4                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 636                         ;
+;     arith             ; 211                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 36                          ;
+;         3 data inputs ; 173                         ;
+;     normal            ; 425                         ;
+;         0 data inputs ; 33                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 261                         ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 124                         ;
+;                       ;                             ;
+; Max LUT depth         ; 85.10                       ;
+; Average LUT depth     ; 76.39                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 06 20:52:05 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BCDtoSSegx4 -c BCDtoSSegx4 --analysis_and_elaboration
+    Info: Processing started: Wed Oct 07 12:48:06 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BCDtoSSegx4 -c BCDtoSSegx4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file bcdtossegx4_tb.v
@@ -190,39 +519,105 @@ Info (12021): Found 1 design units, including 1 entities, in source file /github
     Info (12023): Found entity 1: BCDtoSSeg File: G:/Github/lab02-sumulation-grupo05/hdl/src/Solucion_display_7segx4/BCDtoSSeg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file binary2bcd.v
     Info (12023): Found entity 1: Binary2BCD File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 1
-Info (12127): Elaborating entity "BCDtoSSegx4_TB" for the top level hierarchy
-Warning (10755): Verilog HDL warning at BCDtoSSegx4_TB.v(33): assignments to clk2 create a combinational loop File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v Line: 33
-Info (12128): Elaborating entity "BCDtoSSegx4" for hierarchy "BCDtoSSegx4:uut" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v Line: 20
+Info (12127): Elaborating entity "BCDtoSSegx4" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at BCDtoSSegx4.v(31): truncated value with size 32 to match size of target (27) File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 31
 Warning (10230): Verilog HDL assignment warning at BCDtoSSegx4.v(41): truncated value with size 32 to match size of target (2) File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 41
-Info (12128): Elaborating entity "BCDtoSSeg" for hierarchy "BCDtoSSegx4:uut|BCDtoSSeg:bcdtosseg" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 19
-Info (12128): Elaborating entity "Binary2BCD" for hierarchy "BCDtoSSegx4:uut|Binary2BCD:binary2BCD" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 20
-Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(16): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 16
-Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(18): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 18
-Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(20): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 20
-Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(22): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 22
-Info (10041): Inferred latch for "shifter[26]" at Binary2BCD.v(21) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 21
-Info (10041): Inferred latch for "shifter[27]" at Binary2BCD.v(21) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 21
-Info (10041): Inferred latch for "shifter[28]" at Binary2BCD.v(21) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 21
-Info (10041): Inferred latch for "shifter[22]" at Binary2BCD.v(19) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 19
-Info (10041): Inferred latch for "shifter[23]" at Binary2BCD.v(19) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 19
-Info (10041): Inferred latch for "shifter[24]" at Binary2BCD.v(19) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 19
-Info (10041): Inferred latch for "shifter[25]" at Binary2BCD.v(19) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 19
-Info (10041): Inferred latch for "shifter[18]" at Binary2BCD.v(17) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 17
-Info (10041): Inferred latch for "shifter[19]" at Binary2BCD.v(17) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 17
-Info (10041): Inferred latch for "shifter[20]" at Binary2BCD.v(17) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 17
-Info (10041): Inferred latch for "shifter[21]" at Binary2BCD.v(17) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 17
-Info (10041): Inferred latch for "shifter[14]" at Binary2BCD.v(15) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 15
-Info (10041): Inferred latch for "shifter[15]" at Binary2BCD.v(15) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 15
-Info (10041): Inferred latch for "shifter[16]" at Binary2BCD.v(15) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 15
-Info (10041): Inferred latch for "shifter[17]" at Binary2BCD.v(15) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 15
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk2" is missing source, defaulting to GND File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4_TB.v Line: 6
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4783 megabytes
-    Info: Processing ended: Tue Oct 06 20:52:26 2020
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:47
+Info (12128): Elaborating entity "BCDtoSSeg" for hierarchy "BCDtoSSeg:bcdtosseg" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 19
+Info (12128): Elaborating entity "Binary2BCD" for hierarchy "Binary2BCD:binary2BCD" File: G:/Github/lab02-sumulation-grupo05/lab02/BCDtoSSegx4.v Line: 20
+Warning (10036): Verilog HDL or VHDL warning at Binary2BCD.v(8): object "shifter" assigned a value but never read File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 8
+Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(23): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 23
+Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(24): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 24
+Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(25): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 25
+Warning (10230): Verilog HDL assignment warning at Binary2BCD.v(26): truncated value with size 32 to match size of target (4) File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 26
+Info (278001): Inferred 5 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binary2BCD:binary2BCD|Div1" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 24
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binary2BCD:binary2BCD|Div2" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 25
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binary2BCD:binary2BCD|Div0" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 23
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Binary2BCD:binary2BCD|Mult0" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 24
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Binary2BCD:binary2BCD|Mult1" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 25
+Info (12130): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_divide:Div1" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 24
+Info (12133): Instantiated megafunction "Binary2BCD:binary2BCD|lpm_divide:Div1" with the following parameter: File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 24
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_tmm.tdf
+    Info (12023): Found entity 1: lpm_divide_tmm File: G:/Github/lab02-sumulation-grupo05/lab02/db/lpm_divide_tmm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: G:/Github/lab02-sumulation-grupo05/lab02/db/sign_div_unsign_rlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_4bf.tdf
+    Info (12023): Found entity 1: alt_u_div_4bf File: G:/Github/lab02-sumulation-grupo05/lab02/db/alt_u_div_4bf.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1tc.tdf
+    Info (12023): Found entity 1: add_sub_1tc File: G:/Github/lab02-sumulation-grupo05/lab02/db/add_sub_1tc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_2tc.tdf
+    Info (12023): Found entity 1: add_sub_2tc File: G:/Github/lab02-sumulation-grupo05/lab02/db/add_sub_2tc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_divide:Div2" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 25
+Info (12133): Instantiated megafunction "Binary2BCD:binary2BCD|lpm_divide:Div2" with the following parameter: File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 25
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_qmm.tdf
+    Info (12023): Found entity 1: lpm_divide_qmm File: G:/Github/lab02-sumulation-grupo05/lab02/db/lpm_divide_qmm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_olh File: G:/Github/lab02-sumulation-grupo05/lab02/db/sign_div_unsign_olh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_uaf.tdf
+    Info (12023): Found entity 1: alt_u_div_uaf File: G:/Github/lab02-sumulation-grupo05/lab02/db/alt_u_div_uaf.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_divide:Div0" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 23
+Info (12133): Instantiated megafunction "Binary2BCD:binary2BCD|lpm_divide:Div0" with the following parameter: File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 23
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_7om.tdf
+    Info (12023): Found entity 1: lpm_divide_7om File: G:/Github/lab02-sumulation-grupo05/lab02/db/lpm_divide_7om.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: G:/Github/lab02-sumulation-grupo05/lab02/db/sign_div_unsign_5nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_odf.tdf
+    Info (12023): Found entity 1: alt_u_div_odf File: G:/Github/lab02-sumulation-grupo05/lab02/db/alt_u_div_odf.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult0" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 24
+Info (12133): Instantiated megafunction "Binary2BCD:binary2BCD|lpm_mult:Mult0" with the following parameter: File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 24
+    Info (12134): Parameter "LPM_WIDTHA" = "10"
+    Info (12134): Parameter "LPM_WIDTHB" = "4"
+    Info (12134): Parameter "LPM_WIDTHP" = "14"
+    Info (12134): Parameter "LPM_WIDTHR" = "14"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult0" File: g:/quartus/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult0" File: g:/quartus/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult0" File: g:/quartus/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (12130): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult1" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 25
+Info (12133): Instantiated megafunction "Binary2BCD:binary2BCD|lpm_mult:Mult1" with the following parameter: File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 25
+    Info (12134): Parameter "LPM_WIDTHA" = "4"
+    Info (12134): Parameter "LPM_WIDTHB" = "7"
+    Info (12134): Parameter "LPM_WIDTHP" = "11"
+    Info (12134): Parameter "LPM_WIDTHR" = "11"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult1|multcore:mult_core", which is child of megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult1" File: g:/quartus/quartus/libraries/megafunctions/lpm_mult.tdf Line: 309
+Info (12131): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult1" File: g:/quartus/quartus/libraries/megafunctions/multcore.tdf Line: 229
+Info (12131): Elaborated megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult1|altshift:external_latency_ffs", which is child of megafunction instantiation "Binary2BCD:binary2BCD|lpm_mult:Mult1" File: g:/quartus/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "Binary2BCD:binary2BCD|Add1~28" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 25
+    Info (17048): Logic cell "Binary2BCD:binary2BCD|Add2~0" File: G:/Github/lab02-sumulation-grupo05/lab02/Binary2BCD.v Line: 26
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 663 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 635 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Wed Oct 07 12:48:41 2020
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:55
 
 

@@ -3,11 +3,10 @@ module BCDtoSSegx4(
     input [13:0] innum,
     input clk,//Frecuencia de entrada del oscilador
     output [0:6] sseg,//Salida
-    output reg [3:0] an,//Varieble de control,anodo comun
+    output reg [3:0] an,//Variable de control,anodo comun
 	 
 	 input rst,
 	 output led
-	 
     );
 
 reg [3:0]bcd=0;//Entrada BCD
@@ -33,7 +32,7 @@ always @(posedge clk) begin
 end
 
 reg [1:0] count =0;//Variable de control del multiplexor
-always @(posedge enable) begin // flip flop interno, funciona ante un flanco
+always @(posedge enable) begin // flip flop interno, funciona ante un flanco de subida
 		if(rst==1) begin
 			count<= 0;
 			an<=4'b1111; 
